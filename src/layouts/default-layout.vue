@@ -10,7 +10,8 @@
     <footer class="footer">twitter by @wiz_rein</footer>
   </div>
 </template>
-<style scoped>
+<style lang='scss' scoped>
+// postcss nested基準で記載するがvolorのlintがうるさいので記法としてはscss利用とする
 .main {
   --header-height: 40px;
   --footer-height: 40px;

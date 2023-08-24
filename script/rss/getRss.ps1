@@ -7,5 +7,7 @@ $res = Invoke-WebRequest -Uri $url
 $encoded_res = [System.Text.Encoding]::UTF8.GetString([System.Text.Encoding]::GetEncoding("ISO-8859-1").GetBytes($res.Content))
 
 # ファイル作成
-$formatted_date = Get-Date -Format yyyyMMdd
-New-Item ../dist/rss-${formatted_date}/rss.xml -Force -Value $encoded_res
+# $formatted_date = Get-Date -Format yyyyMMdd
+$distPath = "../../src/assets/dist/"
+
+New-Item  ${distPath}/rss.xml -Force -Value $encoded_res
